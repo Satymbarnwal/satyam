@@ -1,6 +1,6 @@
 # satyambarnwal.com
 
-Personal site for Satyam Barnwal — founder & CEO, ZAP Innovations Pvt Ltd.
+Personal site for Satyam Barnwal — founder, ZAP Innovations Pvt Ltd.
 
 Single static page, no build step. `index.html` holds all markup, CSS and JS;
 fonts come from Google Fonts and `satyam.webp` is the portrait.
@@ -19,13 +19,13 @@ the domain's DNS at GitHub.
 
 ## Content
 
-Sourced from zapinnovations.in: four sectors (QueZap, Zap Water, NuraLearn,
-Zap Studio), the Zap Studio service list, and the shared QueZap/Zap Water
-ecosystem.
+A personal-brand one-pager: hero, about, journey, work, principles, contact.
+The ventures (QueZap, Zap Studio, Zap Water, NuraLearn) are listed as context
+for the person, not as a company pitch.
 
 ## Design
 
-- Type: Archivo variable (width + weight axes), IBM Plex Mono for labels
+- Type: Archivo variable (restrained widths), IBM Plex Mono for labels
 - Colour: white background throughout; black text and orange `#FF4A00` accents only. Single light theme.
 
 ## Portrait
