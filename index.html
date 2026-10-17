@@ -20,30 +20,17 @@
 /* Layout: poster. Oversized expanded type on white, a cut-out portrait standing
    on an orange disc, black bands and orange marquees. Orange is the only colour. */
 :root{
-  --bg:#FFFFFF; --surface:#F7F5F3; --fg:#0B0B0B; --muted:#6E6762;
+  --bg:#FFFFFF; --fg:#0B0B0B; --muted:#6E6762;
   --orange:#FF4A00; --on-orange:#FFFFFF;
-  --inv-bg:#0B0B0B; --inv-fg:#FFFFFF; --inv-muted:#9A928B;
-  --line:rgba(11,11,11,.15); --inv-line:rgba(255,255,255,.2);
+  --inv-bg:#FFFFFF; --inv-fg:#0B0B0B; --inv-muted:#6E6762;
+  --line:rgba(11,11,11,.15); --inv-line:rgba(11,11,11,.15);
+  color-scheme:light;
   --f:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --gl:max(20px,env(safe-area-inset-left,0px));
   --gr:max(20px,env(safe-area-inset-right,0px));
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0B0B0B; --surface:#141210; --fg:#FFFFFF; --muted:#9A928B;
-  --orange:#FF5E1A; --on-orange:#0B0B0B;
-  --inv-bg:#FFFFFF; --inv-fg:#0B0B0B; --inv-muted:#6E6762;
-  --line:rgba(255,255,255,.18); --inv-line:rgba(11,11,11,.18);
-  color-scheme:dark;
-}}
-:root[data-theme="dark"]{
-  --bg:#0B0B0B; --surface:#141210; --fg:#FFFFFF; --muted:#9A928B;
-  --orange:#FF5E1A; --on-orange:#0B0B0B;
-  --inv-bg:#FFFFFF; --inv-fg:#0B0B0B; --inv-muted:#6E6762;
-  --line:rgba(255,255,255,.18); --inv-line:rgba(11,11,11,.18);
-  color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -115,24 +102,24 @@ body::before{content:"";position:fixed;inset:0 0 auto;z-index:41;
 /* portrait */
 .portrait{margin:0;position:relative;justify-self:center;width:min(100%,430px);
   display:flex;justify-content:center}
-.portrait::before{content:"";position:absolute;left:50%;bottom:0;
-  translate:-50% 0;width:min(96%,380px);aspect-ratio:1;border-radius:50%;
-  background:var(--orange);z-index:0}
+.portrait::before{content:"";position:absolute;left:50%;bottom:6%;
+  translate:-50% 0;width:min(94%,360px);aspect-ratio:1;border-radius:50%;
+  border:2.5px solid var(--orange);z-index:0}
 .portrait img{position:relative;z-index:1;display:block;width:100%;height:auto;
-  filter:drop-shadow(0 24px 40px rgba(11,11,11,.18))}
+  filter:drop-shadow(0 18px 34px rgba(11,11,11,.14))}
 @media(max-width:900px){.portrait{width:min(78%,330px)}}
 
 /* marquee */
-.mq{background:var(--orange);color:var(--on-orange);overflow:hidden;padding-block:13px}
-.mq.ghost{background:none;color:var(--fg);border-block:1px solid var(--line)}
+.mq{background:var(--bg);color:var(--fg);overflow:hidden;padding-block:14px;
+  border-block:1px solid var(--line)}
 .mq-in{display:flex;width:max-content}
 .mq span{font-weight:800;font-stretch:112%;font-size:clamp(.92rem,1.9vw,1.25rem);
   text-transform:uppercase;padding-inline:20px;white-space:nowrap;
   display:inline-flex;align-items:center;gap:20px}
-.mq span::after{content:"\2726";font-size:.7em;opacity:.8}
+.mq span::after{content:"\2726";font-size:.7em;color:var(--orange)}
 
 /* inverted band */
-.inv{background:var(--inv-bg);color:var(--inv-fg)}
+.inv{background:var(--bg);color:var(--fg);border-block:1px solid var(--line)}
 .inv .wrap{padding-block:clamp(52px,8vw,100px)}
 .inv .mono{color:var(--inv-muted)}
 .inv .lede{color:var(--inv-muted)}
@@ -171,7 +158,7 @@ section{scroll-margin-top:88px}
   font-size:clamp(1.3rem,2.9vw,1.95rem)}
 
 /* company lead card */
-.lead{background:var(--inv-bg);color:var(--inv-fg);
+.lead{background:var(--bg);color:var(--fg);border:2px solid var(--fg);
   padding:clamp(26px,3.6vw,46px);display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
   gap:clamp(18px,3vw,48px);align-items:start;margin-bottom:clamp(14px,2vw,20px)}
@@ -266,6 +253,7 @@ section{scroll-margin-top:88px}
 .btn-ghost:hover{background:var(--orange);border-color:var(--orange);color:var(--on-orange)}
 .said{color:var(--orange);font-family:var(--f-mono);font-size:11px;
   font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.band{border-block:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
   padding-block:28px 36px;color:var(--muted);border-top:1px solid var(--line)}
 
@@ -515,7 +503,7 @@ section{scroll-margin-top:88px}
     </div>
   </section>
 
-  <section class="sec" id="beliefs" style="background:var(--surface)">
+  <section class="sec band" id="beliefs">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="mono">Beliefs</span>
@@ -546,7 +534,7 @@ section{scroll-margin-top:88px}
     </div>
   </section>
 
-  <div class="mq ghost" aria-hidden="true">
+  <div class="mq" aria-hidden="true">
     <div class="mq-in">
       <span>Food Tech</span><span>Beverage</span><span>EdTech</span>
       <span>Software &amp; AI</span><span>Built in India</span><span>Est. 2026</span>

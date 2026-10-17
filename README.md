@@ -26,7 +26,7 @@ ecosystem.
 ## Design
 
 - Type: Archivo variable (width + weight axes), IBM Plex Mono for labels
-- Colour: white, black, and orange `#FF4A00` only; full light and dark themes
+- Colour: white background throughout; black text and orange `#FF4A00` accents only. Single light theme.
 
 ## Portrait
 
