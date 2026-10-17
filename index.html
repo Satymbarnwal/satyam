@@ -5,19 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Satyam Barnwal</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Satyam Barnwal — founder and CEO of ZAP Innovations Pvt Ltd. Student founder from India building consumer software, starting with QueZap.">
+<meta name="description" content="Satyam Barnwal — founder and CEO of ZAP Innovations Pvt Ltd, building across four sectors: food tech, beverage, education and a software and AI studio.">
 <link rel="canonical" href="https://satyambarnwal.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Satyam Barnwal">
-<meta property="og:description" content="Founder & CEO, ZAP Innovations Pvt Ltd. Building consumer software for India.">
+<meta property="og:description" content="Founder & CEO, ZAP Innovations Pvt Ltd. Four sectors, one team.">
 <meta property="og:url" content="https://satyambarnwal.com/">
+<meta property="og:image" content="https://satyambarnwal.com/satyam.webp">
 <meta name="theme-color" content="#FF4A00">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: poster. Oversized expanded display type on white, interrupted by
-   full-bleed black bands and one orange marquee. Orange is the only colour. */
+   full-bleed black bands and orange marquees. Orange is the only colour. */
 :root{
   --bg:#FFFFFF; --surface:#F6F4F2; --fg:#0B0B0B; --muted:#6E6762;
   --orange:#FF4A00; --on-orange:#FFFFFF;
@@ -46,8 +47,7 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f);
-  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
-  overflow-x:hidden}
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%}
 a{color:inherit}
 .wrap{max-width:1240px;margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
@@ -55,12 +55,11 @@ a{color:inherit}
   letter-spacing:.14em;text-transform:uppercase}
 .o{color:var(--orange)}
 
-/* display type */
-.d1,.d2,.d3{font-family:var(--f);font-weight:900;font-stretch:118%;
-  letter-spacing:-.035em;line-height:.9;margin:0;text-wrap:balance}
-.d1{font-size:clamp(2.9rem,10.2vw,7.6rem)}
+.d1,.d2,.d3{font-weight:900;font-stretch:118%;letter-spacing:-.035em;
+  line-height:.9;margin:0;text-wrap:balance}
+.d1{font-size:clamp(2.7rem,9.2vw,6.8rem)}
 .d2{font-size:clamp(2.1rem,6.2vw,4.4rem);line-height:.94}
-.d3{font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1;font-stretch:110%}
+.d3{font-size:clamp(1.45rem,3.2vw,2.15rem);line-height:1;font-stretch:110%}
 
 /* header */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;
@@ -74,25 +73,25 @@ body::before{content:"";position:fixed;inset:0 0 auto;z-index:31;
 .nav{display:flex;gap:24px;align-items:center}
 .nav a{color:var(--muted);text-decoration:none;transition:color .15s}
 .nav a:hover{color:var(--orange)}
-@media(max-width:700px){.nav a:not(.navcta){display:none}}
+@media(max-width:780px){.nav a:not(.navcta){display:none}}
 .navcta{color:var(--fg)!important;border:1.5px solid var(--fg);border-radius:999px;
   padding:7px 15px;transition:background .15s,color .15s,border-color .15s}
 .navcta:hover{background:var(--orange);border-color:var(--orange);color:var(--on-orange)!important}
 
 /* hero */
-.hero .wrap{padding-block:clamp(46px,8vw,104px) clamp(40px,6vw,76px)}
+.hero .wrap{padding-block:clamp(42px,7vw,92px) clamp(38px,5.4vw,70px)}
 .hero .eyebrow{display:flex;align-items:center;gap:10px;color:var(--orange);
-  margin:0 0 clamp(22px,3.4vw,34px)}
+  margin:0 0 clamp(20px,3.2vw,32px);flex-wrap:wrap}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);flex:none}
 @media(prefers-reduced-motion:no-preference){
   .dot{animation:bk 2.6s ease-in-out infinite}
   @keyframes bk{0%,70%,100%{opacity:1}85%{opacity:.2}}
 }
-.hero .d1{max-width:15ch}
-.hero-foot{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
-  gap:clamp(26px,4.4vw,60px);align-items:end;margin-top:clamp(30px,4.4vw,48px)}
-@media(max-width:840px){.hero-foot{grid-template-columns:1fr;align-items:start}}
-.lede{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);margin:0;
+.hero .d1{max-width:14ch}
+.hero-foot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.72fr);
+  gap:clamp(26px,4.4vw,60px);align-items:end;margin-top:clamp(28px,4.2vw,46px)}
+.hero-left{display:flex;flex-direction:column;gap:clamp(22px,3.2vw,34px);min-width:0}
+.lede{font-size:clamp(1.03rem,1.9vw,1.26rem);color:var(--muted);margin:0;
   max-width:50ch;min-width:0}
 .lede b{color:var(--fg);font-weight:600}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
@@ -104,30 +103,39 @@ body::before{content:"";position:fixed;inset:0 0 auto;z-index:31;
 .btn-fill:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
 .btn-line:hover{background:var(--fg);color:var(--bg)}
 :is(a,button):focus-visible{outline:2.5px solid var(--orange);outline-offset:3px}
+.portrait{margin:0;position:relative;justify-self:end;width:min(100%,320px)}
+.portrait::before{content:"";position:absolute;top:32px;left:18px;right:-18px;
+  bottom:-18px;background:var(--orange);z-index:0}
+.portrait img{position:relative;z-index:1;display:block;width:100%;height:auto;
+  aspect-ratio:1131/1599;object-fit:cover;object-position:50% 10%}
+@media(max-width:860px){
+  .hero-foot{grid-template-columns:1fr;align-items:start;gap:clamp(30px,6vw,44px)}
+  .portrait{justify-self:start;width:min(66%,240px);order:-1}
+  .portrait::before{top:26px;left:14px;right:-14px;bottom:-14px}
+}
 
 /* marquee */
-.mq{background:var(--orange);color:var(--on-orange);overflow:hidden;
-  border-block:1px solid var(--orange);padding-block:13px}
-.mq-in{display:flex;width:max-content;gap:0}
+.mq{background:var(--orange);color:var(--on-orange);overflow:hidden;padding-block:13px}
+.mq.ghost{background:none;color:var(--fg);border-block:1px solid var(--line)}
+.mq-in{display:flex;width:max-content}
 @media(prefers-reduced-motion:no-preference){
-  .mq-in{animation:slide 32s linear infinite}
+  .mq-in{animation:slide 36s linear infinite}
   @keyframes slide{to{transform:translateX(-50%)}}
 }
-.mq span{font-weight:800;font-stretch:112%;font-size:clamp(.95rem,2vw,1.3rem);
-  letter-spacing:-.01em;text-transform:uppercase;padding-inline:22px;
-  white-space:nowrap;display:inline-flex;align-items:center;gap:22px}
-.mq span::after{content:"";width:7px;height:7px;border-radius:50%;
-  background:currentColor;opacity:.75;flex:none}
+.mq span{font-weight:800;font-stretch:112%;font-size:clamp(.92rem,1.9vw,1.25rem);
+  text-transform:uppercase;padding-inline:20px;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:20px}
+.mq span::after{content:"\2726";font-size:.7em;opacity:.8}
 
 /* inverted band */
 .inv{background:var(--inv-bg);color:var(--inv-fg)}
-.inv .wrap{padding-block:clamp(54px,8vw,104px)}
+.inv .wrap{padding-block:clamp(52px,8vw,100px)}
 .inv .mono{color:var(--inv-muted)}
 .inv .lede{color:var(--inv-muted)}
 
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-  border-top:1px solid var(--inv-line);margin-top:clamp(26px,4vw,40px)}
+  border-top:1px solid var(--inv-line);margin-top:clamp(24px,3.6vw,38px)}
 @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
 .stat{padding-block:clamp(22px,3vw,32px);padding-right:16px;min-width:0}
 .stat+.stat{border-left:1px solid var(--inv-line);padding-left:clamp(14px,2.2vw,26px)}
@@ -142,10 +150,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;z-index:31;
 
 /* sections */
 section{scroll-margin-top:88px}
-.sec{padding-block:clamp(58px,9vw,118px)}
+.sec{padding-block:clamp(56px,8.5vw,112px)}
 .sec-head{display:flex;gap:14px;align-items:baseline;
-  margin-bottom:clamp(28px,4vw,46px);flex-wrap:wrap}
+  margin-bottom:clamp(26px,3.8vw,44px);flex-wrap:wrap}
 .sec-head .mono{color:var(--orange);flex:none;padding-top:5px}
+.sec-note{margin:-18px 0 clamp(28px,4vw,44px);color:var(--muted);max-width:56ch}
 
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
@@ -155,71 +164,97 @@ section{scroll-margin-top:88px}
 .about p:last-child{margin-bottom:0}
 .pull{border-top:3px solid var(--orange);padding-top:22px;margin:0;
   font-weight:800;font-stretch:112%;letter-spacing:-.025em;line-height:1.1;
-  font-size:clamp(1.35rem,3vw,2rem)}
+  font-size:clamp(1.3rem,2.9vw,1.95rem)}
 
-/* build cards */
-.build{display:grid;gap:clamp(14px,2vw,20px)}
-.card{border:1.5px solid var(--line);border-radius:4px;
-  padding:clamp(24px,3.4vw,42px);display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
-  gap:clamp(18px,3vw,48px);align-items:start;
-  transition:border-color .18s,background .18s}
-.card:hover{border-color:var(--orange)}
-@media(max-width:820px){.card{grid-template-columns:1fr;gap:16px}}
-.card.lead{background:var(--inv-bg);color:var(--inv-fg);border-color:var(--inv-bg)}
-.card.lead .mono{color:var(--orange)}
-.card.lead p{color:var(--inv-muted)}
-.card.lead .meta li{border-color:var(--inv-line)}
-.card.lead .meta b{color:var(--inv-fg)}
-.card.lead .meta span{color:var(--inv-muted)}
-.card-k{min-width:0}
-.card-k .mono{display:block;margin-bottom:12px;color:var(--orange)}
-.card-k h3{margin:0}
-.card-k .tag{display:inline-block;margin-top:14px;font-family:var(--f-mono);
-  font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
-  padding:5px 11px;border-radius:999px;border:1px solid currentColor;
-  color:var(--orange)}
-.card-b{min-width:0}
-.card-b p{margin:0;color:var(--muted);font-size:1.02rem;max-width:56ch}
-.card-b a.more{display:inline-block;margin-top:16px;font-weight:600;
-  color:var(--orange);text-decoration:none;
-  border-bottom:2px solid color-mix(in srgb,var(--orange) 35%,transparent)}
-.card-b a.more:hover{border-bottom-color:var(--orange)}
-.meta{list-style:none;margin:20px 0 0;padding:0;display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px}
-.meta li{padding:12px 14px 12px 0;border-top:1px solid var(--line);min-width:0}
-.meta b{display:block;font-weight:700;font-size:.98rem}
-.meta span{display:block;color:var(--muted);font-family:var(--f-mono);
+/* company lead card */
+.lead{background:var(--inv-bg);color:var(--inv-fg);
+  padding:clamp(26px,3.6vw,46px);display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
+  gap:clamp(18px,3vw,48px);align-items:start;margin-bottom:clamp(14px,2vw,20px)}
+@media(max-width:820px){.lead{grid-template-columns:1fr;gap:18px}}
+.lead .mono{color:var(--orange);display:block;margin-bottom:12px}
+.lead h3{margin:0}
+.lead p{margin:0;color:var(--inv-muted);font-size:1.02rem;max-width:54ch}
+.meta{list-style:none;margin:22px 0 0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px}
+.meta li{padding:12px 14px 0 0;border-top:1px solid var(--inv-line);min-width:0}
+.meta b{display:block;font-weight:700;font-size:.97rem;color:var(--inv-fg)}
+.meta span{display:block;color:var(--inv-muted);font-family:var(--f-mono);
   font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;margin-top:5px}
+
+/* sector cards */
+.sectors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(14px,2vw,20px)}
+@media(max-width:820px){.sectors{grid-template-columns:1fr}}
+.sector{border:1.5px solid var(--line);padding:clamp(22px,3vw,34px);
+  display:flex;flex-direction:column;min-width:0;
+  transition:border-color .18s,transform .18s}
+.sector:hover{border-color:var(--orange);transform:translateY(-3px)}
+.s-top{display:flex;justify-content:space-between;align-items:center;
+  gap:12px;margin-bottom:clamp(18px,2.6vw,26px)}
+.s-top .mono{color:var(--orange)}
+.tag{font-family:var(--f-mono);font-size:10px;font-weight:500;letter-spacing:.11em;
+  text-transform:uppercase;padding:5px 11px;border-radius:999px;
+  border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.tag.now{background:var(--orange);border-color:var(--orange);color:var(--on-orange)}
+.sector h3{margin:0 0 7px}
+.s-sub{margin:0 0 14px;color:var(--orange);font-family:var(--f-mono);
+  font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
+.sector p{margin:0;color:var(--muted);font-size:1rem;max-width:46ch}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;
+  margin:20px 0 0;padding:0}
+.chips li{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);border:1px solid var(--line);
+  padding:5px 10px;border-radius:3px}
+.sector .more{display:inline-block;margin-top:18px;font-weight:600;
+  color:var(--orange);text-decoration:none;align-self:flex-start;
+  border-bottom:2px solid color-mix(in srgb,var(--orange) 35%,transparent)}
+.sector .more:hover{border-bottom-color:var(--orange)}
+.eco{margin-top:clamp(14px,2vw,20px);border:1.5px dashed var(--line);
+  padding:clamp(18px,2.6vw,26px);display:flex;align-items:center;gap:14px;
+  flex-wrap:wrap;justify-content:center;text-align:center}
+.eco b{font-weight:800;font-stretch:110%;font-size:1.05rem}
+.eco .mono{color:var(--muted)}
+.eco .arrow{color:var(--orange);font-size:1.2rem}
+
+/* studio services */
+.svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));
+  gap:clamp(20px,3vw,40px);margin-top:clamp(28px,4vw,44px)}
+.svc{min-width:0;border-top:1.5px solid var(--inv-line);padding-top:18px}
+.svc .n{font-family:var(--f-mono);font-size:11px;font-weight:500;
+  letter-spacing:.14em;color:var(--orange)}
+.svc h4{margin:10px 0 8px;font-weight:800;font-stretch:108%;font-size:1.14rem;
+  letter-spacing:-.02em}
+.svc p{margin:0;color:var(--inv-muted);font-size:.98rem;max-width:40ch}
 
 /* beliefs */
 .beliefs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
   gap:clamp(22px,3.4vw,44px)}
 @media(max-width:760px){.beliefs{grid-template-columns:1fr}}
 .belief{min-width:0;border-top:1.5px solid var(--fg);padding-top:18px}
-.belief h3{margin:0 0 9px;font-weight:800;font-stretch:108%;font-size:1.18rem;
+.belief h3{margin:0 0 9px;font-weight:800;font-stretch:108%;font-size:1.16rem;
   letter-spacing:-.02em}
 .belief p{margin:0;color:var(--muted);max-width:48ch}
 
 /* contact */
-.contact .wrap{padding-block:clamp(58px,9vw,118px)}
-.contact .d2{max-width:18ch}
-.mailrow{margin-top:clamp(28px,4vw,44px);display:flex;gap:16px;
+.contact .wrap{padding-block:clamp(56px,8.5vw,112px)}
+.contact .d2{max-width:17ch}
+.mailrow{margin-top:clamp(26px,3.6vw,42px);display:flex;gap:16px;
   align-items:center;flex-wrap:wrap}
 .mail{font-weight:900;font-stretch:112%;letter-spacing:-.03em;
-  font-size:clamp(1.3rem,4vw,2.5rem);color:var(--orange);text-decoration:none;
+  font-size:clamp(1.25rem,3.8vw,2.4rem);color:var(--orange);text-decoration:none;
   border-bottom:3px solid color-mix(in srgb,var(--orange) 32%,transparent);
   word-break:break-word}
 .mail:hover{border-bottom-color:var(--orange)}
 .btn-ghost{font-family:var(--f-mono);font-size:11px;font-weight:500;
   letter-spacing:.14em;text-transform:uppercase;background:none;
   color:var(--inv-fg);cursor:pointer;border:1.5px solid var(--inv-line);
-  border-radius:999px;padding:10px 17px;transition:background .15s,color .15s,border-color .15s}
+  border-radius:999px;padding:10px 17px;
+  transition:background .15s,color .15s,border-color .15s}
 .btn-ghost:hover{background:var(--orange);border-color:var(--orange);color:var(--on-orange)}
 .said{color:var(--orange);font-family:var(--f-mono);font-size:11px;
   font-weight:500;letter-spacing:.14em;text-transform:uppercase}
 
-/* footer */
 .foot .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
   padding-block:28px 36px;color:var(--muted);border-top:1px solid var(--line)}
 </style>
@@ -231,9 +266,10 @@ section{scroll-margin-top:88px}
     <a class="mark" href="#top">SATYAM BARNWAL<span class="o">.</span></a>
     <nav class="nav mono">
       <a href="#about">About</a>
-      <a href="#building">Building</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#studio">Studio</a>
       <a href="#beliefs">Beliefs</a>
-      <a class="navcta" href="#contact">Contact</a>
+      <a class="navcta" href="#contact">Let's talk</a>
     </nav>
   </div>
 </header>
@@ -243,25 +279,31 @@ section{scroll-margin-top:88px}
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow mono"><span class="dot"></span>Founder &amp; CEO — ZAP Innovations Pvt Ltd</p>
-      <h1 class="d1">I build things that give people back their <span class="o">time</span>.</h1>
+      <h1 class="d1">I build the software that powers what's <span class="o">next</span>.</h1>
       <div class="hero-foot">
-        <p class="lede">Student founder from India. I started <b>ZAP Innovations</b>
-          in 2025 to go after the everyday friction nobody had bothered to fix, and
-          we shipped <b>QueZap</b> first.</p>
-        <div class="cta">
-          <a class="btn btn-fill" href="#building">See what I'm building</a>
-          <a class="btn btn-line" href="#contact">Get in touch</a>
+        <div class="hero-left">
+          <p class="lede">I founded <b>ZAP Innovations</b> in 2026. We build across
+            four sectors: food tech, beverage, education, and a studio shipping AI
+            agents, apps and custom software. Fast, sharp, built to last.</p>
+          <div class="cta">
+            <a class="btn btn-fill" href="#sectors">See our four sectors</a>
+            <a class="btn btn-line" href="#contact">Let's talk</a>
+          </div>
         </div>
+        <figure class="portrait">
+          <img src="satyam.webp" width="1131" height="1599" decoding="async"
+               alt="Satyam Barnwal, founder and CEO of ZAP Innovations Pvt Ltd.">
+        </figure>
       </div>
     </div>
   </section>
 
   <div class="mq" aria-hidden="true">
     <div class="mq-in">
-      <span>ZAP Innovations</span><span>QueZap</span><span>Built in India</span>
-      <span>Est. 2025</span><span>Student founder</span><span>Consumer software</span>
-      <span>ZAP Innovations</span><span>QueZap</span><span>Built in India</span>
-      <span>Est. 2025</span><span>Student founder</span><span>Consumer software</span>
+      <span>AI Chatbots</span><span>Agents</span><span>Websites</span><span>Apps</span>
+      <span>Custom Software</span><span>Product Design</span><span>Automation</span>
+      <span>AI Chatbots</span><span>Agents</span><span>Websites</span><span>Apps</span>
+      <span>Custom Software</span><span>Product Design</span><span>Automation</span>
     </div>
   </div>
 
@@ -269,10 +311,10 @@ section{scroll-margin-top:88px}
     <div class="wrap">
       <p class="mono">By the numbers</p>
       <div class="stats">
-        <div class="stat"><b>2025</b><span class="mono">Company founded</span></div>
-        <div class="stat"><b>6+</b><span class="mono">Partner cafes</span></div>
-        <div class="stat"><b>15 min</b><span class="mono">Pickup window</span></div>
-        <div class="stat"><b>24–48 h</b><span class="mono">Partner onboarding</span></div>
+        <div class="stat"><b>2026</b><span class="mono">Company founded</span></div>
+        <div class="stat"><b>04</b><span class="mono">Sectors</span></div>
+        <div class="stat"><b>05</b><span class="mono">Studio services</span></div>
+        <div class="stat"><b>15 min</b><span class="mono">QueZap pickup slot</span></div>
       </div>
     </div>
   </section>
@@ -286,80 +328,161 @@ section{scroll-margin-top:88px}
       <div class="about">
         <div>
           <p>I'm Satyam Barnwal, founder and CEO of ZAP Innovations Pvt Ltd. I
-            started the company in 2025, in the middle of being a student, because
-            I kept walking into problems that software should have solved a decade
-            ago and somehow nobody had.</p>
-          <p>The first one found me in a queue. Friends of mine missed a lecture
-            waiting on a cafe counter, and on the same trip the network dropped
-            while I was paying, so I lost my place in the line. The cafe already
-            knew what it was cooking. I already knew what I wanted and when I
-            needed it. The only missing piece was a way to agree on the time
-            beforehand.</p>
-          <p>That became QueZap. It is the first product out of ZAP Innovations,
-            not the last. What I'm actually interested in is consumer software for
-            India, built by people who live with the same friction as the people
-            using it.</p>
+            started it in 2026, in the middle of being a student, because I kept
+            walking into problems that software should have solved a decade ago
+            and somehow nobody had.</p>
+          <p>The first one found me in a queue, back in October 2025. Friends of
+            mine missed a lecture waiting on a cafe counter, and on the same trip
+            the network dropped while I was paying, so I lost my place in the line.
+            The cafe already knew what it was cooking. I already knew what I wanted
+            and when I needed it. The only missing piece was a way to agree on the
+            time beforehand.</p>
+          <p>That became QueZap. It is one of four sectors we now build in, and the
+            studio that builds our own products takes outside work too. The thread
+            running through all of it is the same: take the part of a day that
+            people waste, and hand it to software.</p>
         </div>
         <blockquote class="pull">The food was never the slow part. <span class="o">The line was.</span></blockquote>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="building" style="padding-top:0">
+  <section class="sec" id="sectors" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head">
-        <span class="mono">Portfolio</span>
-        <h2 class="d2">What I'm building</h2>
+        <span class="mono">What we build</span>
+        <h2 class="d2">Four sectors, one team</h2>
+      </div>
+      <p class="sec-note">Two of them run on the same ecosystem. The fourth builds
+        all of it, and takes outside work too.</p>
+
+      <article class="lead">
+        <div>
+          <span class="mono">The company</span>
+          <h3 class="d3">ZAP Innovations<br>Pvt Ltd</h3>
+        </div>
+        <div>
+          <p>Founded in 2026. One team across food tech, beverage, education and
+            software, so a thing that works in one sector can be put to work in the
+            next one quickly.</p>
+          <ul class="meta">
+            <li><b>2026</b><span>Founded</span></li>
+            <li><b>India</b><span>Operating from</span></li>
+            <li><b>Four sectors</b><span>Scope</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="sectors">
+        <article class="sector">
+          <div class="s-top">
+            <span class="mono">Sector 01 — Food Tech</span>
+            <span class="tag">Launching soon</span>
+          </div>
+          <h3 class="d3">QueZap</h3>
+          <p class="s-sub">Pre-order &amp; skip the queue</p>
+          <p>India's smart food pre-ordering platform. Order ahead from your
+            favourite cafes, pick a 15-minute slot, and walk in to collect exactly
+            when it's ready. No queues, no waiting.</p>
+          <ul class="chips">
+            <li>Pickup slots</li><li>Campus Mode</li><li>QuePoints rewards</li>
+          </ul>
+          <a class="more" href="https://quezap.in/" rel="noopener">Visit quezap.in</a>
+        </article>
+
+        <article class="sector">
+          <div class="s-top">
+            <span class="mono">Sector 02 — Beverage</span>
+            <span class="tag">Coming soon</span>
+          </div>
+          <h3 class="d3">Zap Water</h3>
+          <p class="s-sub">Packaged drinking water</p>
+          <p>Clean, pure, packaged drinking water you can trust, with every bottle
+            held to a standard worth the Zap name. It runs on the same ordering and
+            rewards system as QueZap, so the two work as one ecosystem.</p>
+          <ul class="chips">
+            <li>Purified</li><li>Sealed fresh</li><li>Runs on QueZap</li>
+          </ul>
+        </article>
+
+        <article class="sector">
+          <div class="s-top">
+            <span class="mono">Sector 03 — EdTech</span>
+            <span class="tag">Coming soon</span>
+          </div>
+          <h3 class="d3">NuraLearn</h3>
+          <p class="s-sub">AI-powered learning platform</p>
+          <p>An LMS with AI built into the core of the product rather than bolted on
+            the side. We're building this one quietly, and there will be more to
+            share when it's closer.</p>
+          <ul class="chips"><li>Details under wraps</li></ul>
+        </article>
+
+        <article class="sector">
+          <div class="s-top">
+            <span class="mono">Sector 04 — Software &amp; AI</span>
+            <span class="tag now">Available now</span>
+          </div>
+          <h3 class="d3">Zap Studio</h3>
+          <p class="s-sub">Software, apps &amp; AI agents</p>
+          <p>Websites, mobile apps, custom software, AI agents and automation tools,
+            for clients of every size. The same team, on the same standards, that
+            builds our own products.</p>
+          <ul class="chips">
+            <li>AI agents</li><li>Web &amp; apps</li><li>Automation</li>
+          </ul>
+          <a class="more" href="#studio">What the studio ships</a>
+        </article>
       </div>
 
-      <div class="build">
-        <article class="card lead">
-          <div class="card-k">
-            <span class="mono">01 — The company</span>
-            <h3 class="d3">ZAP Innovations<br>Pvt Ltd</h3>
-            <span class="tag">Operating</span>
-          </div>
-          <div class="card-b">
-            <p>The parent company, founded in 2025. We build consumer software for
-              India and run every product under one roof, so a thing that works in
-              one city can be put in front of the next one quickly.</p>
-            <ul class="meta">
-              <li><b>2025</b><span>Founded</span></li>
-              <li><b>India</b><span>Operating from</span></li>
-              <li><b>Consumer software</b><span>Focus</span></li>
-            </ul>
-          </div>
-        </article>
+      <div class="eco">
+        <b>QueZap</b>
+        <span class="arrow" aria-hidden="true">&#8644;</span>
+        <b>Zap Water</b>
+        <span class="mono">One shared ecosystem — ordering · fulfilment · rewards</span>
+      </div>
+    </div>
+  </section>
 
-        <article class="card">
-          <div class="card-k">
-            <span class="mono">02 — Flagship product</span>
-            <h3 class="d3">QueZap</h3>
-            <span class="tag">Live</span>
-          </div>
-          <div class="card-b">
-            <p>Pre-order food from partner cafes and campus canteens across India.
-              Pay in advance, choose a collection slot, and walk straight to the
-              counter. It is a pickup service, so there is no delivery fleet and no
-              rider fee. Campus Mode is built around class timings, QuePoints
-              rewards the regulars, and partner cafes get a dashboard showing live
-              orders, peak hours and their best-selling items.</p>
-            <a class="more" href="https://quezap.in/" rel="noopener">Visit quezap.in</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-k">
-            <span class="mono">03 — Non-profit</span>
-            <h3 class="d3">ZAP Foundation</h3>
-            <span class="tag">Planned</span>
-          </div>
-          <div class="card-b">
-            <p>A non-profit arm, run separately from the product business. The
-              intent is to put some of what the company builds and earns behind
-              work that does not have to pay for itself.</p>
-          </div>
-        </article>
+  <section class="inv" id="studio">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">Sector 04 — Zap Studio</span>
+        <h2 class="d2">Inside the studio</h2>
+      </div>
+      <p class="lede">From a single chatbot to a full product platform, we ship
+        custom software for businesses of every size.</p>
+      <div class="svcs">
+        <div class="svc">
+          <span class="n">01</span>
+          <h4>AI Chatbots &amp; Agents</h4>
+          <p>Conversational assistants and autonomous agents that answer, act and
+            get real work done for you.</p>
+        </div>
+        <div class="svc">
+          <span class="n">02</span>
+          <h4>Websites</h4>
+          <p>Fast, beautiful, conversion-focused sites, from landing pages to full
+            platforms.</p>
+        </div>
+        <div class="svc">
+          <span class="n">03</span>
+          <h4>Mobile Apps</h4>
+          <p>Native-feeling iOS and Android apps your users will actually love
+            opening.</p>
+        </div>
+        <div class="svc">
+          <span class="n">04</span>
+          <h4>Custom Software</h4>
+          <p>Tailored systems built around how you work, for teams and businesses
+            of every size.</p>
+        </div>
+        <div class="svc">
+          <span class="n">05</span>
+          <h4>Automation Tools</h4>
+          <p>The repetitive middle of your operation, from quoting to onboarding to
+            reporting, handed to software.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -373,8 +496,8 @@ section{scroll-margin-top:88px}
       <div class="beliefs">
         <div class="belief">
           <h3>Solve a problem you have had yourself</h3>
-          <p>I lost my own lunch breaks to this before I wrote a line of code about
-            it. It makes the first hundred decisions obvious.</p>
+          <p>I lost my own lunch breaks to a queue before I wrote a line of code
+            about it. It makes the first hundred decisions obvious.</p>
         </div>
         <div class="belief">
           <h3>Ship it before it is comfortable</h3>
@@ -382,9 +505,9 @@ section{scroll-margin-top:88px}
             month of planning it in a document.</p>
         </div>
         <div class="belief">
-          <h3>The partner side is the product</h3>
-          <p>A cafe owner who cannot see their own peak hours stops opening the app
-            by week two. Both sides of the counter have to win.</p>
+          <h3>One team, four sectors</h3>
+          <p>The studio that builds our own products is the studio clients hire.
+            Same people, same standards, no second-string bench.</p>
         </div>
         <div class="belief">
           <h3>Build for India, properly</h3>
@@ -395,12 +518,22 @@ section{scroll-margin-top:88px}
     </div>
   </section>
 
+  <div class="mq ghost" aria-hidden="true">
+    <div class="mq-in">
+      <span>Food Tech</span><span>Beverage</span><span>EdTech</span>
+      <span>Software &amp; AI</span><span>Built in India</span><span>Est. 2026</span>
+      <span>Food Tech</span><span>Beverage</span><span>EdTech</span>
+      <span>Software &amp; AI</span><span>Built in India</span><span>Est. 2026</span>
+    </div>
+  </div>
+
   <section class="inv contact" id="contact">
     <div class="wrap">
       <p class="mono">Contact</p>
-      <h2 class="d2" style="margin-top:16px">Building something? <span class="o">Let's talk.</span></h2>
-      <p class="lede" style="margin-top:20px">Founders, cafe owners, students, and
-        anyone who wants to put a product in front of people. My inbox is open.</p>
+      <h2 class="d2" style="margin-top:16px">Got something to build? <span class="o">Let's talk.</span></h2>
+      <p class="lede" style="margin-top:20px">Zap Studio is taking on work now.
+        Founders, cafe owners, students, and anyone who wants a product in front of
+        real people. My inbox is open.</p>
       <div class="mailrow">
         <a class="mail" href="mailto:hello@satyambarnwal.com">hello@satyambarnwal.com</a>
         <button class="btn-ghost" id="copy-mail" type="button">Copy</button>
