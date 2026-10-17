@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Satyam Barnwal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Satyam Barnwal is the founder and CEO of ZAP Innovations Pvt Ltd, the company behind QueZap, a food pre-order and pickup app for cafes across India.">
+<link rel="canonical" href="https://satyambarnwal.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Satyam Barnwal">
+<meta property="og:description" content="Founder and CEO of ZAP Innovations Pvt Ltd. Building QueZap.">
+<meta property="og:url" content="https://satyambarnwal.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: timetable grid. Left-aligned, ragged right, hairline rules,
+   a mono data rail, and one full-bleed ultramarine block at the centre. */
+:root{
+  --paper:#EBECEF; --paper-2:#E0E2E8; --raise:#F6F7F9;
+  --ink:#101217; --ink-2:#585E6C;
+  --blue:#1E3FD8; --on-blue:#EEF0FB;
+  --line:rgba(16,18,23,.16); --line-soft:rgba(16,18,23,.08);
+  --f-display:"Bricolage Grotesque","Archivo",system-ui,sans-serif;
+  --f-body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --gut:max(20px,env(safe-area-inset-left,0px));
+  --gut-r:max(20px,env(safe-area-inset-right,0px));
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0E1014; --paper-2:#161920; --raise:#1B1F27;
+  --ink:#E7E8EB; --ink-2:#99A0AD;
+  --blue:#5B7BFF; --on-blue:#070B18;
+  --line:rgba(231,232,235,.18); --line-soft:rgba(231,232,235,.09);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#0E1014; --paper-2:#161920; --raise:#1B1F27;
+  --ink:#E7E8EB; --ink-2:#99A0AD;
+  --blue:#5B7BFF; --on-blue:#070B18;
+  --line:rgba(231,232,235,.18); --line-soft:rgba(231,232,235,.09);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.mono{font-family:var(--f-mono);font-size:11px;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;z-index:21;
+  height:env(safe-area-inset-top,0px);background:var(--paper)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding-block:14px}
+.mark{font-family:var(--f-display);font-weight:800;font-size:17px;
+  letter-spacing:-.02em;text-decoration:none}
+.mark span{color:var(--blue)}
+.nav{display:flex;gap:22px}
+.nav a{color:var(--ink-2);text-decoration:none;transition:color .15s}
+.nav a:hover{color:var(--blue)}
+@media(max-width:620px){.nav{display:none}}
+
+/* hero */
+.hero .wrap{padding-block:clamp(44px,8vw,96px) clamp(32px,5vw,56px)}
+.eyebrow{color:var(--blue);margin:0 0 clamp(20px,3vw,30px)}
+.h1{font-family:var(--f-display);font-weight:800;
+  font-size:clamp(2.45rem,7.4vw,5.1rem);line-height:.98;letter-spacing:-.035em;
+  margin:0;max-width:16ch;text-wrap:balance}
+.h1 em{font-style:normal;color:var(--blue)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
+  gap:clamp(28px,5vw,64px);align-items:end;margin-top:clamp(26px,4vw,40px)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;align-items:start}}
+.lede{font-size:clamp(1.02rem,1.9vw,1.2rem);color:var(--ink-2);
+  margin:0;max-width:52ch;min-width:0}
+.lede strong{color:var(--ink);font-weight:600}
+
+/* data rail */
+.rail{display:grid;gap:0;min-width:0;border-top:1px solid var(--ink)}
+.rail div{display:flex;justify-content:space-between;align-items:baseline;
+  gap:14px;padding-block:9px;border-bottom:1px solid var(--line-soft)}
+.rail dt,.rail .k{color:var(--ink-2)}
+.rail .v{font-family:var(--f-mono);font-size:12.5px;text-align:right}
+.live{display:inline-flex;align-items:center;gap:7px;color:var(--blue)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--blue)}
+@media(prefers-reduced-motion:no-preference){
+  .dot{animation:bk 2.6s ease-in-out infinite}
+  @keyframes bk{0%,70%,100%{opacity:1}85%{opacity:.25}}
+}
+
+/* slot strip — the pickup window */
+.slots{margin-top:clamp(34px,5vw,54px);border:1px solid var(--line);
+  background:var(--raise);padding:16px clamp(14px,2.4vw,22px) 18px}
+.slots-h{display:flex;justify-content:space-between;align-items:center;
+  gap:12px;flex-wrap:wrap;color:var(--ink-2);margin-bottom:14px}
+.slots-h b{color:var(--blue);font-weight:500}
+.ticks{display:flex;gap:3px;align-items:flex-end;height:38px}
+.ticks i{flex:1;min-width:0;height:13px;background:var(--line);border-radius:1px}
+.ticks i.on{height:38px;background:var(--blue)}
+.scale{display:flex;justify-content:space-between;margin-top:9px;color:var(--ink-2)}
+
+/* stats */
+.stats{border-block:1px solid var(--ink)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;padding-block:0}
+@media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+.stat{padding-block:clamp(20px,3vw,30px);padding-right:18px}
+.stat+.stat{border-left:1px solid var(--line);padding-left:clamp(14px,2.4vw,26px)}
+@media(max-width:720px){
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+}
+.stat b{display:block;font-family:var(--f-display);font-weight:600;
+  font-size:clamp(1.65rem,3.6vw,2.5rem);line-height:1;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:9px;color:var(--ink-2)}
+
+/* generic section */
+section{scroll-margin-top:84px}
+.sec{padding-block:clamp(56px,9vw,112px)}
+.sec-head{display:flex;gap:14px;align-items:baseline;
+  margin-bottom:clamp(26px,4vw,42px)}
+.sec-head .mono{color:var(--blue);flex:none;padding-top:4px}
+.h2{font-family:var(--f-display);font-weight:600;
+  font-size:clamp(1.75rem,4.1vw,2.9rem);line-height:1.04;letter-spacing:-.03em;
+  margin:0;text-wrap:balance}
+
+/* story */
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(28px,5vw,70px)}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+.story p{margin:0 0 1.05em;max-width:62ch;min-width:0}
+.story p:last-child{margin-bottom:0}
+.quote{font-family:var(--f-display);font-weight:600;
+  font-size:clamp(1.3rem,2.9vw,1.95rem);line-height:1.18;letter-spacing:-.02em;
+  margin:0;border-top:2px solid var(--blue);padding-top:20px;color:var(--ink)}
+.quote span{color:var(--blue)}
+
+/* blue block */
+.block{background:var(--blue);color:var(--on-blue)}
+.block .wrap{padding-block:clamp(56px,9vw,112px)}
+.block .mono{color:color-mix(in srgb,var(--on-blue) 72%,transparent)}
+.block .h2{font-size:clamp(2.1rem,5.6vw,3.8rem);font-weight:800;letter-spacing:-.035em}
+.block .sec-head .mono{color:color-mix(in srgb,var(--on-blue) 72%,transparent)}
+.block-lede{font-size:clamp(1.02rem,1.9vw,1.22rem);max-width:56ch;
+  margin:0 0 clamp(36px,5vw,56px);color:color-mix(in srgb,var(--on-blue) 88%,transparent)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  border-top:1px solid color-mix(in srgb,var(--on-blue) 38%,transparent)}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{padding-block:22px 26px;padding-right:20px;min-width:0;
+  border-bottom:1px solid color-mix(in srgb,var(--on-blue) 20%,transparent)}
+.step+.step{border-left:1px solid color-mix(in srgb,var(--on-blue) 20%,transparent);
+  padding-left:clamp(16px,2.6vw,30px)}
+@media(max-width:760px){.step+.step{border-left:0;padding-left:0}}
+.step .n{font-family:var(--f-mono);font-size:12px;
+  color:color-mix(in srgb,var(--on-blue) 60%,transparent)}
+.step h3{font-family:var(--f-display);font-weight:600;font-size:1.3rem;
+  letter-spacing:-.02em;margin:10px 0 7px}
+.step p{margin:0;font-size:.95rem;
+  color:color-mix(in srgb,var(--on-blue) 82%,transparent)}
+.feats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(22px,3.4vw,38px);margin-top:clamp(40px,6vw,62px)}
+@media(max-width:700px){.feats{grid-template-columns:1fr}}
+.feat{min-width:0}
+.feat h4{font-family:var(--f-display);font-weight:600;font-size:1.08rem;
+  letter-spacing:-.015em;margin:0 0 6px}
+.feat p{margin:0;font-size:.94rem;
+  color:color-mix(in srgb,var(--on-blue) 80%,transparent)}
+
+/* ventures table */
+.tbl{width:100%;border-collapse:collapse;font-size:.96rem}
+.tbl th{text-align:left;font-family:var(--f-mono);font-size:11px;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--ink-2);
+  padding-block:0 12px;border-bottom:1px solid var(--ink)}
+.tbl td{padding-block:18px;border-bottom:1px solid var(--line);
+  vertical-align:top;padding-right:16px}
+.tbl td:last-child,.tbl th:last-child{padding-right:0;text-align:right}
+.tbl .name{font-family:var(--f-display);font-weight:600;font-size:1.12rem;
+  letter-spacing:-.02em}
+.tbl .name a{color:var(--blue);text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb,var(--blue) 40%,transparent)}
+.tbl .name a:hover{border-bottom-color:var(--blue)}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:10.5px;
+  font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 9px;border:1px solid var(--line);border-radius:999px;
+  color:var(--ink-2);white-space:nowrap}
+.tag.go{color:var(--blue);border-color:color-mix(in srgb,var(--blue) 45%,transparent)}
+.tscroll{overflow-x:auto}
+@media(max-width:620px){.tbl{min-width:520px}}
+
+/* principles */
+.prin{display:grid;gap:0;border-top:1px solid var(--ink)}
+.prin article{display:grid;grid-template-columns:minmax(0,10rem) minmax(0,1fr);
+  gap:clamp(16px,3vw,40px);padding-block:clamp(20px,3vw,28px);
+  border-bottom:1px solid var(--line)}
+@media(max-width:700px){.prin article{grid-template-columns:1fr;gap:8px}}
+.prin h3{font-family:var(--f-display);font-weight:600;font-size:1.08rem;
+  letter-spacing:-.015em;margin:0;text-wrap:balance}
+.prin p{margin:0;color:var(--ink-2);max-width:62ch;min-width:0}
+
+/* contact */
+.contact{background:var(--paper-2);border-top:1px solid var(--line)}
+.contact .wrap{padding-block:clamp(56px,9vw,104px)}
+.c-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
+  gap:clamp(28px,5vw,64px);align-items:start}
+@media(max-width:800px){.c-grid{grid-template-columns:1fr}}
+.mail{display:inline-block;font-family:var(--f-display);font-weight:600;
+  font-size:clamp(1.3rem,3.6vw,2.3rem);letter-spacing:-.03em;color:var(--blue);
+  text-decoration:none;border-bottom:2px solid color-mix(in srgb,var(--blue) 35%,transparent);
+  margin-top:6px;word-break:break-word}
+.mail:hover{border-bottom-color:var(--blue)}
+.copy{margin-top:18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.13em;
+  text-transform:uppercase;background:none;color:var(--ink);cursor:pointer;
+  border:1px solid var(--ink);border-radius:999px;padding:9px 16px;
+  transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.said{color:var(--blue)}
+
+/* footer */
+.foot{border-top:1px solid var(--line)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;padding-block:26px 34px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Satyam Barnwal<span>.</span></a>
+    <nav class="nav mono">
+      <a href="#story">Story</a>
+      <a href="#quezap">QueZap</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow mono">Founder &amp; CEO — ZAP Innovations Pvt Ltd</p>
+      <h1 class="h1">Nobody should spend a lunch break standing in a <em>line</em>.</h1>
+
+      <div class="hero-grid">
+        <p class="lede">I'm Satyam Barnwal. I build <strong>QueZap</strong>, a pre-order
+          app for cafes across India. You pay ahead, pick a collection slot, and
+          walk to the counter when the food is ready. The ordering stays on your
+          phone and the queue disappears.</p>
+
+        <dl class="rail">
+          <div><dt class="k">Role</dt><dd class="v">Founder &amp; CEO</dd></div>
+          <div><dt class="k">Company</dt><dd class="v">ZAP Innovations Pvt Ltd</dd></div>
+          <div><dt class="k">Product</dt><dd class="v">QueZap</dd></div>
+          <div><dt class="k">Based</dt><dd class="v">India</dd></div>
+          <div><dt class="k">Status</dt><dd class="v"><span class="live"><span class="dot"></span>Building</span></dd></div>
+        </dl>
+      </div>
+
+      <figure class="slots">
+        <figcaption class="slots-h mono">
+          <span>Pickup window — Thu, 12:00–13:00</span>
+          <span><b>12:30–12:45 reserved</b></span>
+        </figcaption>
+        <div class="ticks" role="img" aria-label="A one-hour lunch period divided into five-minute slots, with the 12:30 to 12:45 window reserved.">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+          <i class="on"></i><i class="on"></i><i class="on"></i>
+          <i></i><i></i><i></i>
+        </div>
+        <div class="scale mono"><span>12:00</span><span>12:30</span><span>13:00</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat"><b>6+</b><span class="mono">Partner cafes</span></div>
+      <div class="stat"><b>15 min</b><span class="mono">Pickup window</span></div>
+      <div class="stat"><b>24–48 h</b><span class="mono">Partner review</span></div>
+      <div class="stat"><b>2025</b><span class="mono">Founded</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="story">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">Oct 2025</span>
+        <h2 class="h2">How it started</h2>
+      </div>
+      <div class="story">
+        <div>
+          <p>The idea came out of an ordinary bad afternoon. Friends of mine missed
+            a lecture because the queue at the cafe moved slower than the clock did.
+            On the same trip the network dropped at the payment counter, and by the
+            time it came back I had lost my place in the line.</p>
+          <p>Standing there, the maths was obvious. The cafe already knew what it was
+            going to cook. I already knew what I wanted and when I needed it. The
+            only thing missing was a way to agree on the time in advance.</p>
+          <p>I started researching that October, while still a student. ZAP
+            Innovations Pvt Ltd came out of that research, and QueZap is the first
+            thing we have built with it.</p>
+        </div>
+        <blockquote class="quote">The food was never the slow part. <span>The line was.</span></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="quezap">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">Product</span>
+        <h2 class="h2">QueZap</h2>
+      </div>
+      <p class="block-lede">Pre-order food from partner cafes across India. Pay in
+        advance, choose when you will collect, and skip straight to the counter.
+        QueZap is a pickup service. There is no delivery fleet and no rider fee.</p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="n">01</span>
+          <h3>Pick a cafe</h3>
+          <p>Browse partner cafes near you, or the canteens on your campus.</p>
+        </div>
+        <div class="step">
+          <span class="n">02</span>
+          <h3>Add your items</h3>
+          <p>Build the order and pay on the spot with UPI or a card.</p>
+        </div>
+        <div class="step">
+          <span class="n">03</span>
+          <h3>Choose a slot</h3>
+          <p>The kitchen cooks to a 15-minute window, so it is hot when you arrive.</p>
+        </div>
+      </div>
+
+      <div class="feats">
+        <div class="feat">
+          <h4>Campus Mode</h4>
+          <p>Built for students, around on-campus canteens and the cafes just
+            outside the gate, where a lunch break is measured in minutes.</p>
+        </div>
+        <div class="feat">
+          <h4>QuePoints</h4>
+          <p>Rewards that accumulate on repeat orders, so the regulars who keep a
+            cafe running get something back for it.</p>
+        </div>
+        <div class="feat">
+          <h4>Partner dashboard</h4>
+          <p>Cafes see live orders, peak hours, their most popular items, and how
+            customers come back. Demand becomes something you can plan for.</p>
+        </div>
+        <div class="feat">
+          <h4>Onboarding in 24–48 hours</h4>
+          <p>Cafe applications are reviewed within two working days. A valid FSSAI
+            licence is required before going live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="ventures">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">Index</span>
+        <h2 class="h2">What I'm building</h2>
+      </div>
+      <div class="tscroll">
+        <table class="tbl">
+          <thead>
+            <tr><th>Name</th><th>What it is</th><th>Since</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name">ZAP Innovations Pvt Ltd</td>
+              <td>The parent company. Everything below is built inside it.</td>
+              <td>2025</td>
+              <td><span class="tag go">Operating</span></td>
+            </tr>
+            <tr>
+              <td class="name"><a href="https://quezap.in/" rel="noopener">QueZap</a></td>
+              <td>Food pre-ordering and pickup for cafes and campus canteens.</td>
+              <td>2025</td>
+              <td><span class="tag go">Live</span></td>
+            </tr>
+            <tr>
+              <td class="name">ZAP Foundation</td>
+              <td>A non-profit, run separately from the product business.</td>
+              <td>—</td>
+              <td><span class="tag">Planned</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">Approach</span>
+        <h2 class="h2">How I work</h2>
+      </div>
+      <div class="prin">
+        <article>
+          <h3>Solve a problem you have had</h3>
+          <p>I lost my own lunch breaks to this queue before I wrote a line of code
+            about it. It makes the first hundred decisions much easier.</p>
+        </article>
+        <article>
+          <h3>Pickup before delivery</h3>
+          <p>Delivery is a logistics company wearing an app. Pickup is a scheduling
+            problem, and scheduling can be solved in software alone.</p>
+        </article>
+        <article>
+          <h3>The partner side is the product</h3>
+          <p>A cafe that cannot see its own peak hours will stop opening the
+            dashboard by the second week. The owner has to win too.</p>
+        </article>
+        <article>
+          <h3>Students first</h3>
+          <p>Campus is where a queue costs the most, and where people will tell you
+            immediately when something does not work.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="c-grid">
+        <div>
+          <p class="mono" style="color:var(--blue);margin:0">Get in touch</p>
+          <p class="h2" style="margin:14px 0 0">Running a cafe, studying on a campus we should be on, or just want to talk shop?</p>
+        </div>
+        <div>
+          <p class="mono" style="color:var(--ink-2);margin:0">Email</p>
+          <a class="mail" href="mailto:hello@satyambarnwal.com">hello@satyambarnwal.com</a>
+          <div class="copy">
+            <button class="btn" id="copy-mail" type="button">Copy address</button>
+            <span class="mono said" id="copied" hidden>Copied</span>
+          </div>
+          <p style="margin:26px 0 0;color:var(--ink-2);max-width:40ch">
+            For cafe partnerships, QueZap reviews new applications within 24 to 48 hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Satyam Barnwal — ZAP Innovations Pvt Ltd</span>
+    <span class="mono">Set in Bricolage Grotesque, Archivo &amp; IBM Plex Mono</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('copy-mail'),s=document.getElementById('copied');
+  if(!b)return;
+  b.addEventListener('click',function(){
+    var mail='hello@satyambarnwal.com';
+    var done=function(){s.hidden=false;setTimeout(function(){s.hidden=true},1800)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(mail).then(done,select);
+    }else{select()}
+    function select(){
+      var r=document.createRange();r.selectNode(document.querySelector('.mail'));
+      var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);
+    }
+  });
+})();
+</script>
+</body>
+</html>
