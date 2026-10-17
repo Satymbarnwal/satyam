@@ -19,5 +19,5 @@ the domain's DNS at GitHub.
 
 ## Design
 
-- Type: Bricolage Grotesque (display), Archivo (body), IBM Plex Mono (labels)
-- Colour: ultramarine `#1E3FD8` on blue-biased neutrals; full light and dark themes
+- Type: Archivo variable (width + weight axes), IBM Plex Mono for labels
+- Colour: white, black, and orange `#FF4A00` only; full light and dark themes
