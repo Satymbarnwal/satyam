@@ -27,3 +27,11 @@ ecosystem.
 
 - Type: Archivo variable (width + weight axes), IBM Plex Mono for labels
 - Colour: white, black, and orange `#FF4A00` only; full light and dark themes
+
+## Portrait
+
+`satyam-cut.webp` is the background-removed portrait used in the hero.
+`satyam.webp` is the untouched original. `tools-cutout.py` regenerates the
+cutout from the original (needs Pillow + numpy):
+
+    python3 tools-cutout.py
