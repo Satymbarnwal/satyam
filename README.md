@@ -2,29 +2,28 @@
 
 Personal site for Satyam Barnwal — founder, ZAP Innovations Pvt Ltd.
 
-A single static page, no build step. `index.html` holds all markup, CSS and
-JS, fonts come from Google Fonts, and `satyam-cut.webp` is the portrait.
+A single static page, no build step. Everything the site serves lives in
+`client/`: `index.html` holds all markup, CSS and JS, fonts come from Google
+Fonts, and `satyam-cut.webp` is the portrait.
 
-Only two files are needed to serve the site: `index.html` and
-`satyam-cut.webp`, side by side.
+`client/` is the one source of truth — both GitHub Pages and Zoho Catalyst
+deploy that same folder, so there is no second copy to keep in sync.
 
 ## Run locally
 
-    python3 -m http.server 8000
+    python3 -m http.server 8000 --directory client
 
 Then open http://localhost:8000
 
 ## Deploy with GitHub Pages
 
-The site sits at the repository root, so Pages needs no configuration:
+Already set up and live. `.github/workflows/pages.yml` publishes `client/`
+on every push to `main`; Pages is set to the **GitHub Actions** source, so
+nothing needs doing by hand.
 
-1. Push this branch, or merge it into `main`.
-2. In the repository, go to **Settings -> Pages**.
-3. Under **Source**, choose **Deploy from a branch**, pick the branch and
-   the `/ (root)` folder, and save.
+Live at https://satymbarnwal.github.io/satyam/
 
-The site goes live at `https://<user>.github.io/<repo>/` within a minute or
-two. For `satyambarnwal.com`, enter it under **Custom domain** on that same
+For `satyambarnwal.com`, enter it under **Custom domain** on that same
 page, then add these DNS records at your registrar:
 
     A     @   185.199.108.153
@@ -61,12 +60,12 @@ point the domain's DNS at the CNAME the console gives you.
 
 ## Deploy anywhere else
 
-`index.html` and `satyam-cut.webp` are a plain static pair, so they drop
-straight into Netlify, Vercel or Cloudflare Pages with no changes.
+`client/` is a plain static directory, so it drops straight into Netlify,
+Vercel or Cloudflare Pages with no changes.
 
 ## Portrait
 
-`satyam-cut.webp` is the background-removed portrait used in the hero.
+`client/satyam-cut.webp` is the background-removed portrait used in the hero.
 `satyam.webp` is the untouched original. `tools-cutout.py` regenerates the
 cutout from the original (needs Pillow and numpy):
 

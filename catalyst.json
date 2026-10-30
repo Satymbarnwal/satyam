@@ -2,6 +2,6 @@
   "project_name": "satyam",
   "project_id": "REPLACE_WITH_YOUR_PROJECT_ID",
   "client": {
-    "source": "."
+    "source": "client"
   }
 }
