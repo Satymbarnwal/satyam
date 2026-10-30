@@ -6,62 +6,42 @@ A single static page, no build step. Everything the site serves lives in
 `client/`: `index.html` holds all markup, CSS and JS, fonts come from Google
 Fonts, and `satyam-cut.webp` is the portrait.
 
-`client/` is the one source of truth — both GitHub Pages and Zoho Catalyst
-deploy that same folder, so there is no second copy to keep in sync.
-
 ## Run locally
 
     python3 -m http.server 8000 --directory client
 
 Then open http://localhost:8000
 
-## Deploy with GitHub Pages
+## Hosting
 
-Already set up and live. `.github/workflows/pages.yml` publishes `client/`
-on every push to `main`; Pages is set to the **GitHub Actions** source, so
-nothing needs doing by hand.
+GitHub Pages, deployed by `.github/workflows/pages.yml` on every push to
+`main`. Pages is set to the **GitHub Actions** source, so there is nothing to
+configure by hand and no second copy of the site to keep in sync.
 
-Live at https://satymbarnwal.github.io/satyam/
+- Live: https://satyambarnwal.com
+- Fallback: https://satymbarnwal.github.io/satyam/
 
-For `satyambarnwal.com`, enter it under **Custom domain** on that same
-page, then add these DNS records at your registrar:
+`client/CNAME` is what points Pages at the custom domain. The DNS records at
+the registrar are:
 
     A     @   185.199.108.153
     A     @   185.199.109.153
     A     @   185.199.110.153
     A     @   185.199.111.153
-    CNAME www <user>.github.io
+    CNAME www satymbarnwal.github.io
 
-GitHub writes a `CNAME` file into the repository once you save the domain.
-`.nojekyll` is already present so Pages serves the files untouched.
+### If the browser shows a privacy / certificate warning
 
-## Deploy to Zoho Catalyst
+Normal right after the domain is first pointed at Pages. GitHub issues the
+Let's Encrypt certificate only once DNS resolves, which takes from about
+15 minutes up to a few hours.
 
-The repository also works as a Catalyst **Web Client Hosting** project.
-
-1. Install the CLI and sign in:
-
-       npm install -g zcatalyst-cli
-       catalyst login
-
-2. Create a project named `satyam` in the Catalyst console, then open
-   `catalyst.json` and replace `REPLACE_WITH_YOUR_PROJECT_ID` with that
-   project's ID. (Running `catalyst init` in this directory writes the file
-   for you instead, if you prefer — pick "Client" as the component and the
-   current directory, and keep the existing files when asked.)
-
-3. Deploy:
-
-       catalyst deploy --only client
-
-Catalyst serves the site at `https://<project>-<id>.development.catalystserverless.in/`
-Add `satyambarnwal.com` under the project's **Custom Domain** settings and
-point the domain's DNS at the CNAME the console gives you.
-
-## Deploy anywhere else
-
-`client/` is a plain static directory, so it drops straight into Netlify,
-Vercel or Cloudflare Pages with no changes.
+1. Settings -> Pages shows the state under the custom domain. "Certificate is
+   being provisioned" means it is working; "DNS check unsuccessful" means the
+   records are wrong.
+2. Leave **Enforce HTTPS** unticked until the certificate exists, then tick it.
+3. If it is still warning after several hours, clear the custom domain, save,
+   re-enter it and save again. That re-triggers provisioning.
 
 ## Portrait
 
