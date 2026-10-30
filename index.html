@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Satyam Barnwal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Satyam Barnwal is the founder of ZAP Innovations Pvt Ltd. He builds software that gives people back their time.">
+<link rel="canonical" href="https://satyambarnwal.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Satyam Barnwal">
+<meta property="og:description" content="Founder, ZAP Innovations Pvt Ltd. I build software that gives people back their time.">
+<meta property="og:url" content="https://satyambarnwal.com/">
+<meta property="og:image" content="https://satyambarnwal.com/satyam-cut.webp">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..112,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an executive one-pager. White throughout, a single measured column
+   of content, hairline rules for structure, orange reserved for emphasis. */
+:root{
+  --bg:#FFFFFF; --fg:#0C0C0C; --muted:#67625C; --faint:#95908A;
+  --orange:#E8430D; --on-orange:#FFFFFF;
+  --line:rgba(12,12,12,.14); --hair:rgba(12,12,12,.08);
+  --f:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --gl:max(22px,env(safe-area-inset-left,0px));
+  --gr:max(22px,env(safe-area-inset-right,0px));
+  color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:var(--gl);padding-right:var(--gr)}
+.mono{font-family:var(--f-mono);font-size:11px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase}
+.o{color:var(--orange)}
+h1,h2,h3,h4{margin:0;font-weight:800;font-stretch:104%;letter-spacing:-.025em;
+  text-wrap:balance}
+.d1{font-size:clamp(2.9rem,8.2vw,5.6rem);line-height:.94;letter-spacing:-.04em}
+.d2{font-size:clamp(1.75rem,4vw,2.7rem);line-height:1.04}
+.d3{font-size:clamp(1.2rem,2.3vw,1.5rem);line-height:1.12}
+
+/* progress + header */
+.prog{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:2px;width:0;
+  background:var(--orange);z-index:60;transition:width .1s linear}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--bg);
+  border-bottom:1px solid transparent;transition:border-color .3s}
+.top.stuck{border-bottom-color:var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;z-index:41;
+  height:env(safe-area-inset-top,0px);background:var(--bg)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-block:18px;transition:padding-block .3s}
+.top.stuck .wrap{padding-block:12px}
+.mark{text-decoration:none;font-weight:800;font-size:15px;letter-spacing:-.01em;
+  display:flex;align-items:baseline;gap:9px}
+.mark em{font-style:normal;font-family:var(--f-mono);font-size:10px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+@media(max-width:560px){.mark em{display:none}}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;position:relative}
+.nav a:not(.navcta)::after{content:"";position:absolute;left:0;bottom:-6px;height:1.5px;
+  width:100%;background:var(--orange);transform:scaleX(0);transform-origin:right;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.nav a:not(.navcta):hover{color:var(--fg)}
+.nav a:not(.navcta):hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:860px){.nav a:not(.navcta){display:none}}
+.navcta{color:var(--fg)!important;border:1px solid var(--fg);border-radius:2px;
+  padding:9px 17px;transition:background .2s,color .2s}
+.navcta:hover{background:var(--fg);color:var(--bg)!important}
+
+/* hero */
+.hero .wrap{padding-block:clamp(30px,5vw,58px) clamp(40px,6vw,76px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(24px,4vw,56px);align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:clamp(26px,5vw,38px)}}
+.hero-left{min-width:0;display:flex;flex-direction:column;align-items:flex-start;
+  gap:clamp(18px,2.4vw,26px)}
+.kicker{display:flex;align-items:center;gap:10px;color:var(--orange);margin:0;flex-wrap:wrap}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none}
+.tagline{font-size:clamp(1.18rem,2.3vw,1.6rem);line-height:1.32;margin:0;
+  font-weight:500;max-width:22ch;letter-spacing:-.018em}
+.lede{font-size:1.02rem;color:var(--muted);margin:0;max-width:48ch;min-width:0}
+.cta{display:flex;gap:11px;flex-wrap:wrap}
+.btn{display:inline-block;font-weight:600;font-size:.94rem;text-decoration:none;
+  padding:13px 24px;border-radius:2px;border:1px solid var(--fg);
+  transition:background .2s,color .2s,border-color .2s}
+.btn-fill{background:var(--fg);color:var(--bg)}
+.btn-fill:hover{background:var(--orange);border-color:var(--orange);color:var(--on-orange)}
+.btn-line:hover{background:var(--fg);color:var(--bg)}
+:is(a,button):focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+/* portrait — clean cut-out, grounded by a soft shadow. No frame, no ring. */
+.portrait{margin:0;position:relative;justify-self:center;width:min(100%,400px)}
+.portrait::after{content:"";position:absolute;left:12%;right:12%;bottom:-6px;
+  height:22px;border-radius:50%;background:rgba(12,12,12,.16);filter:blur(16px)}
+.portrait img{position:relative;z-index:1;display:block;width:100%;height:auto;
+  filter:drop-shadow(0 14px 26px rgba(12,12,12,.10))}
+@media(max-width:920px){.portrait{width:min(74%,300px)}}
+
+/* meta rail */
+.rail{border-top:1px solid var(--fg);border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:720px){.rail{grid-template-columns:repeat(2,1fr)}}
+.rail div{padding:18px 18px 18px 0;min-width:0}
+.rail div+div{border-left:1px solid var(--hair);padding-left:clamp(14px,2.2vw,26px)}
+@media(max-width:720px){
+  .rail div:nth-child(3){border-left:0;padding-left:0}
+  .rail div:nth-child(n+3){border-top:1px solid var(--hair)}
+}
+.rail dt{color:var(--faint);font-family:var(--f-mono);font-size:10px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;margin:0 0 7px}
+.rail dd{margin:0;font-weight:600;font-size:.98rem}
+
+/* sections */
+section{scroll-margin-top:96px}
+.sec{padding-block:clamp(60px,8.5vw,118px)}
+.sec+.sec{border-top:1px solid var(--hair)}
+.sec-head{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr);
+  gap:clamp(14px,3vw,36px);align-items:baseline;margin-bottom:clamp(30px,4.2vw,52px)}
+@media(max-width:760px){.sec-head{grid-template-columns:1fr;gap:10px}}
+.sec-head .mono{color:var(--orange)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr);
+  gap:clamp(14px,3vw,36px)}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about-body{min-width:0;max-width:64ch}
+.about-body p{margin:0 0 1.1em}
+.about-body p:last-of-type{margin-bottom:0}
+.lead-p{font-size:1.16rem;line-height:1.5;font-weight:500;letter-spacing:-.012em}
+.pull{margin:clamp(30px,4vw,44px) 0 0;padding:24px 0 0;border-top:2px solid var(--orange);
+  font-weight:800;font-stretch:104%;font-size:clamp(1.2rem,2.5vw,1.65rem);
+  line-height:1.24;letter-spacing:-.022em}
+.sign{margin-top:26px;color:var(--faint);font-family:var(--f-mono);font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase}
+
+/* timeline */
+.tl{display:grid;gap:0;min-width:0}
+.tl article{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr);
+  gap:clamp(14px,3vw,36px);padding-block:clamp(20px,2.6vw,28px);
+  border-top:1px solid var(--hair);position:relative}
+.tl article:first-child{border-top:1px solid var(--fg)}
+@media(max-width:760px){.tl article{grid-template-columns:1fr;gap:8px}}
+.tl .when{color:var(--orange);font-family:var(--f-mono);font-size:11px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;padding-top:4px}
+.tl h3{font-size:1.14rem;font-weight:700;margin-bottom:6px}
+.tl p{margin:0;color:var(--muted);max-width:58ch}
+
+/* ventures */
+.vent{display:grid;gap:0;border-top:1px solid var(--fg)}
+.vent article{display:grid;grid-template-columns:minmax(0,9rem) minmax(0,1fr) auto;
+  gap:clamp(14px,3vw,36px);align-items:baseline;padding-block:clamp(22px,2.8vw,30px);
+  border-bottom:1px solid var(--hair);transition:background .25s}
+.vent article:hover{background:rgba(12,12,12,.015)}
+@media(max-width:860px){
+  .vent article{grid-template-columns:1fr auto;gap:10px 16px}
+  .vent .when{grid-column:1/-1;order:-1}
+}
+.vent .when{color:var(--faint);font-family:var(--f-mono);font-size:10px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;padding-top:5px}
+.vent .v-body{min-width:0}
+.vent h3{font-size:1.3rem;margin-bottom:7px}
+.vent h3 a{color:inherit;text-decoration:none;
+  border-bottom:2px solid color-mix(in srgb,var(--orange) 38%,transparent)}
+.vent h3 a:hover{color:var(--orange);border-bottom-color:var(--orange)}
+.vent p{margin:0;color:var(--muted);max-width:56ch}
+.tag{font-family:var(--f-mono);font-size:10px;font-weight:500;letter-spacing:.12em;
+  text-transform:uppercase;padding:5px 11px;border-radius:999px;
+  border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.tag.now{background:var(--orange);border-color:var(--orange);color:var(--on-orange)}
+
+/* principles */
+.prin{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(26px,3.6vw,48px)}
+@media(max-width:760px){.prin{grid-template-columns:1fr}}
+.prin article{min-width:0;border-top:1px solid var(--fg);padding-top:18px}
+.prin h3{font-size:1.1rem;font-weight:700;margin-bottom:9px}
+.prin p{margin:0;color:var(--muted);max-width:46ch}
+
+/* contact */
+.contact .wrap{padding-block:clamp(60px,8.5vw,118px)}
+.mail{display:inline-block;margin-top:clamp(22px,3vw,34px);font-weight:800;
+  font-stretch:104%;letter-spacing:-.035em;font-size:clamp(1.4rem,4.4vw,2.9rem);
+  color:var(--fg);text-decoration:none;word-break:break-word;
+  border-bottom:3px solid color-mix(in srgb,var(--orange) 34%,transparent);
+  transition:color .2s,border-color .2s}
+.mail:hover{color:var(--orange);border-bottom-color:var(--orange)}
+.crow{margin-top:20px;display:flex;gap:11px;align-items:center;flex-wrap:wrap}
+.btn-ghost{font-family:var(--f-mono);font-size:10.5px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;background:none;color:var(--fg);cursor:pointer;
+  border:1px solid var(--line);border-radius:999px;padding:10px 17px;
+  transition:background .2s,color .2s,border-color .2s}
+.btn-ghost:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.said{color:var(--orange);font-family:var(--f-mono);font-size:10.5px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase}
+.foot{border-top:1px solid var(--hair)}
+.foot .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  padding-block:30px 40px;color:var(--faint)}
+
+/* motion — quiet by design */
+.js-anim .reveal{opacity:0;transform:translateY(16px);
+  transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1)}
+.js-anim .reveal.in{opacity:1;transform:none}
+.js-anim .dot{animation:bk 3s ease-in-out infinite}
+.js-anim .hero-left>*{animation:rise .75s cubic-bezier(.2,.8,.2,1) both}
+.js-anim .hero-left>*:nth-child(1){animation-delay:.04s}
+.js-anim .hero-left>*:nth-child(2){animation-delay:.12s}
+.js-anim .hero-left>*:nth-child(3){animation-delay:.2s}
+.js-anim .hero-left>*:nth-child(4){animation-delay:.28s}
+.js-anim .hero-left>*:nth-child(5){animation-delay:.36s}
+.js-anim .portrait{animation:fade .9s cubic-bezier(.2,.8,.2,1) .1s both}
+@keyframes bk{0%,72%,100%{opacity:1}86%{opacity:.25}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js-anim .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script>
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('js-anim');
+  }
+</script>
+
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<header class="top" id="top-bar">
+  <div class="wrap">
+    <a class="mark" href="#top">Satyam Barnwal<em>Founder</em></a>
+    <nav class="nav mono">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Work</a>
+      <a href="#principles">Principles</a>
+      <a class="navcta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <p class="kicker mono"><span class="dot"></span>Founder — ZAP Innovations Pvt Ltd</p>
+          <h1 class="d1">Satyam Barnwal</h1>
+          <p class="tagline">I build software that gives people back their time.</p>
+          <p class="lede">I started ZAP Innovations in 2026, while still a student,
+            after losing one too many lunch breaks to a queue. We build across food
+            tech, beverage, education and software.</p>
+          <div class="cta">
+            <a class="btn btn-fill" href="#about">Read my story</a>
+            <a class="btn btn-line" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <img src="satyam-cut.webp" width="1131" height="1553" decoding="async"
+               alt="Portrait of Satyam Barnwal.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <dl class="rail reveal">
+      <div><dt>Role</dt><dd>Founder</dd></div>
+      <div><dt>Company</dt><dd>ZAP Innovations Pvt Ltd</dd></div>
+      <div><dt>Based</dt><dd>India</dd></div>
+      <div><dt>Building since</dt><dd>2026</dd></div>
+    </dl>
+  </div>
+
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="about">
+        <p class="mono reveal" style="color:var(--orange);margin:0">About</p>
+        <div class="about-body reveal">
+          <p class="lead-p">I'm a student founder from India, and I build consumer
+            software for the kind of everyday friction most people have stopped
+            noticing.</p>
+          <p>The problem that started all of this found me in a queue in October
+            2025. Friends of mine missed a lecture waiting on a cafe counter, and
+            on the same trip the network dropped while I was paying, so I lost my
+            place in the line. The cafe already knew what it was going to cook. I
+            already knew what I wanted and when I needed it. The only missing piece
+            was a way to agree on the time beforehand.</p>
+          <p>That question turned into a product, and the product turned into a
+            company. I founded ZAP Innovations in 2026 and now build across four
+            areas, from food ordering to packaged water to an AI learning platform,
+            with a software studio underneath that builds all of it.</p>
+          <p>I care most about the unglamorous part of this work: shipping to real
+            people early, listening to the ones who complain, and designing for
+            patchy networks and tight budgets because that is the normal case where
+            I live, not the edge case.</p>
+          <blockquote class="pull">The food was never the slow part. <span class="o">The line was.</span></blockquote>
+          <p class="sign">Satyam Barnwal — Founder</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="journey">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="mono">Journey</span>
+        <h2 class="d2">How I got here</h2>
+      </div>
+      <div class="tl">
+        <article class="reveal">
+          <div class="when">Oct 2025</div>
+          <div>
+            <h3>The queue</h3>
+            <p>Lost a lunch break and a place in line to a dropped payment. Started
+              researching whether pre-ordering could fix it.</p>
+          </div>
+        </article>
+        <article class="reveal">
+          <div class="when">2026</div>
+          <div>
+            <h3>Founded ZAP Innovations Pvt Ltd</h3>
+            <p>Incorporated the company while still studying, with one team meant
+              to work across several sectors rather than one.</p>
+          </div>
+        </article>
+        <article class="reveal">
+          <div class="when">2026</div>
+          <div>
+            <h3>Built QueZap</h3>
+            <p>A food pre-ordering platform for cafes and campus canteens, built
+              around 15-minute pickup slots. Launching soon.</p>
+          </div>
+        </article>
+        <article class="reveal">
+          <div class="when">2026</div>
+          <div>
+            <h3>Opened the studio to clients</h3>
+            <p>The team that builds our own products started taking outside work:
+              websites, apps, AI agents and automation.</p>
+          </div>
+        </article>
+        <article class="reveal">
+          <div class="when">Next</div>
+          <div>
+            <h3>Zap Water and NuraLearn</h3>
+            <p>A packaged water brand that runs on the same ordering system, and an
+              LMS with AI built into its core. Both in progress.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="mono">Work</span>
+        <h2 class="d2">What I'm building</h2>
+      </div>
+      <div class="vent">
+        <article class="reveal">
+          <div class="when">Food tech</div>
+          <div class="v-body">
+            <h3><a href="https://quezap.in/" rel="noopener">QueZap</a></h3>
+            <p>Pre-order from cafes and campus canteens, pick a 15-minute slot, and
+              collect without queueing.</p>
+          </div>
+          <span class="tag">Launching soon</span>
+        </article>
+        <article class="reveal">
+          <div class="when">Software &amp; AI</div>
+          <div class="v-body">
+            <h3>Zap Studio</h3>
+            <p>Websites, mobile apps, custom software and AI agents, for clients of
+              every size.</p>
+          </div>
+          <span class="tag now">Available now</span>
+        </article>
+        <article class="reveal">
+          <div class="when">Beverage</div>
+          <div class="v-body">
+            <h3>Zap Water</h3>
+            <p>Packaged drinking water, running on the same ordering and rewards
+              system as QueZap.</p>
+          </div>
+          <span class="tag">Coming soon</span>
+        </article>
+        <article class="reveal">
+          <div class="when">EdTech</div>
+          <div class="v-body">
+            <h3>NuraLearn</h3>
+            <p>A learning platform with AI built into the core of the product
+              rather than bolted on the side.</p>
+          </div>
+          <span class="tag">Coming soon</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="principles">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="mono">Principles</span>
+        <h2 class="d2">How I work</h2>
+      </div>
+      <div class="prin">
+        <article class="reveal">
+          <h3>Solve a problem you have had yourself</h3>
+          <p>I lost my own lunch breaks to a queue before I wrote a line of code
+            about it. It makes the first hundred decisions obvious.</p>
+        </article>
+        <article class="reveal">
+          <h3>Ship it before it is comfortable</h3>
+          <p>A week in front of real people teaches you more than a month of
+            planning in a document.</p>
+        </article>
+        <article class="reveal">
+          <h3>Both sides have to win</h3>
+          <p>A cafe owner who cannot see their own peak hours stops opening the app
+            by week two. The operator matters as much as the customer.</p>
+        </article>
+        <article class="reveal">
+          <h3>Build for India, properly</h3>
+          <p>Patchy networks, UPI, tight budgets and crowded counters are the normal
+            case here. Design for them first.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="mono">Contact</span>
+        <h2 class="d2">Let's talk</h2>
+      </div>
+      <div class="about">
+        <div></div>
+        <div class="reveal" style="min-width:0">
+          <p style="margin:0;color:var(--muted);max-width:46ch">If you're building
+            something, running a cafe, or want the studio to take on a project, my
+            inbox is open.</p>
+          <a class="mail" href="mailto:hello@satyambarnwal.com">hello@satyambarnwal.com</a>
+          <div class="crow">
+            <button class="btn-ghost" id="copy-mail" type="button">Copy address</button>
+            <span class="said" id="copied" hidden>Copied</span>
+          </div>
+          <!-- Add real profiles here, e.g.
+          <div class="crow">
+            <a class="btn-ghost" href="https://www.linkedin.com/in/USERNAME">LinkedIn</a>
+            <a class="btn-ghost" href="https://x.com/USERNAME">X</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Satyam Barnwal</span>
+    <span class="mono">Founder, ZAP Innovations Pvt Ltd</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var anim=document.documentElement.classList.contains('js-anim');
+
+  var b=document.getElementById('copy-mail'),s=document.getElementById('copied'),
+      m=document.querySelector('.mail');
+  function select(){try{var r=document.createRange();r.selectNode(m);
+    var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);}catch(e){}}
+  if(b)b.addEventListener('click',function(){
+    var done=function(){s.hidden=false;setTimeout(function(){s.hidden=true},1800)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText('hello@satyambarnwal.com').then(done,select);
+    }else{select()}
+  });
+
+  var prog=document.getElementById('prog'),bar=document.getElementById('top-bar'),tick=false;
+  function onScroll(){
+    if(tick)return; tick=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      if(prog)prog.style.width=(h>0?Math.min(100,window.scrollY/h*100):0)+'%';
+      if(bar)bar.classList.toggle('stuck',window.scrollY>8);
+      tick=false;
+    });
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){reveals.forEach(function(el){el.classList.add('in')})}
+  if(!anim||!('IntersectionObserver' in window)){showAll()}
+  else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+    reveals.forEach(function(el,i){el.style.transitionDelay=(i%3)*70+'ms';io.observe(el)});
+    setTimeout(showAll,1800);
+  }
+})();
+</script>
+</body>
+</html>
